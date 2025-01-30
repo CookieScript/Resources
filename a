@@ -46,3 +46,4 @@ local FriendService = game:GetService("FriendService")
 local GamePassService = game:GetService("GamePassService")
 local PointsService = game:GetService("PointsService")
 local MemoryStoreService = game:GetService("MemoryStoreService")
+local player = game.Players.LocalPlayer
