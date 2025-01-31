@@ -3,10 +3,10 @@ Info:
 Bypasser
 
 Support:
-Dh
-hood custom
-yeno hood
-dah hood
+Dh | 🔴
+hood custom | 🟢
+yeno hood | 🟢
+dah hood | 🟡
 More next time
 
 ]]
