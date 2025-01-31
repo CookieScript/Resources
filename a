@@ -1,5 +1,5 @@
 local MarketplaceService = game:GetService("MarketplaceService")
-local gameName = MarketplaceService:GetProductInfo(game.PlaceId).Name
+local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
 local Workspace = game:GetService("Workspace")
 local Players = game:GetService("Players")
 local Lighting = game:GetService("Lighting")
