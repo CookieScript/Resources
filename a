@@ -48,3 +48,4 @@ local PointsService = game:GetService("PointsService")
 local MemoryStoreService = game:GetService("MemoryStoreService")
 local player = game.Players.LocalPlayer
 local Date = os.date("%Y-%m-%d")
+local UserInputService = game:GetService("UserInputService")
