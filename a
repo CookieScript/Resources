@@ -2,6 +2,8 @@ local Date = os.date("%Y-%m-%d")
 local UserInputService = game:GetService("UserInputService")
 local LocalPlayer = game:GetService("Players").LocalPlayer
 local gameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+local player = game.Players.LocalPlayer
+
 
 local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
