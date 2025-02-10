@@ -1,0 +1,12 @@
+local function getHWID()
+    return game:GetService("RbxAnalyticsService"):GetClientId()
+end
+
+local hwid = getHWID()
+
+if setclipboard then
+    setclipboard(hwid)
+    print("Your HWID has been copied to the clipboard: " .. hwid)
+else
+    print("Your HWID is: " .. hwid .. " (Clipboard copying not supported)")
+end
