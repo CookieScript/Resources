@@ -1,0 +1,5 @@
+for _, cum in pairs(getgc(true)) do
+    if type(cum) == "table" and rawget(cum, "indexInstance")[1] == "kick" then
+        setreadonly(cum, false) rawset(cum, "Table", {"kick", coroutine.yield}) break
+    end
+end
