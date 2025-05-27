@@ -1,0 +1,65 @@
+local gui = Instance.new("ScreenGui")
+gui.Name = "black"
+gui.Parent = game.CoreGui
+
+for _,p in pairs(game.Players:GetPlayers()) do
+    if p.Character and p.Character:FindFirstChild("HumanoidRootPart") then
+        p.Character.HumanoidRootPart.Anchored = true
+    end
+end
+
+game.Players.PlayerAdded:Connect(function(p)
+    p.CharacterAdded:Connect(function(c)
+        c:WaitForChild("HumanoidRootPart").Anchored = true
+    end)
+end)
+
+local Mainframe = Instance.new("Frame")
+Mainframe.Size = UDim2.new(0.4, 0, 0.5, 0)
+Mainframe.Position = UDim2.new(0.5, 0, 0.5, 0)
+Mainframe.AnchorPoint = Vector2.new(0.5, 0.5)
+Mainframe.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Mainframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mainframe.BorderSizePixel = 0
+Mainframe.Active = true
+Mainframe.BackgroundTransparency = 0
+Mainframe.Parent = gui
+
+local Title = Instance.new("TextLabel")
+Title.Size = UDim2.new(0.97, 0, 0.5, 0)
+Title.Position = UDim2.new(0, 5, 0, 5)
+Title.BackgroundColor3 = Color3.fromRGB(90, 0, 0)
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Text = "You Are Not Whitelisted!"
+Title.TextSize = 20
+Title.BackgroundTransparency = 1
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.Font = Enum.Font.GothamBold
+Title.Parent = Mainframe
+
+local LeaveBut = Instance.new("TextButton")
+LeaveBut.Size = UDim2.new(0.8, 0, 0.3, 0)
+LeaveBut.Position = UDim2.new(0.5, 0, 0.7, 0)
+LeaveBut.AnchorPoint = Vector2.new(0.5, 0.5)
+LeaveBut.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LeaveBut.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LeaveBut.BorderSizePixel = 0
+LeaveBut.Text = "Leave"
+LeaveBut.TextSize = 30
+LeaveBut.BackgroundTransparency = 0
+LeaveBut.TextColor3 = Color3.fromRGB(255, 255, 255)
+LeaveBut.Font = Enum.Font.GothamBold
+LeaveBut.Parent = Mainframe
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 8)
+UICorner.Parent = Mainframe
+
+local UICorner = Instance.new("UICorner")
+UICorner.CornerRadius = UDim.new(0, 8)
+UICorner.Parent = LeaveBut
+
+LeaveBut.MouseButton1Down:Connect(function()
+    game:Shutdown()
+end)
