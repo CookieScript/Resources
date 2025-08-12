@@ -1,12 +1,2 @@
-return { [[Update:
-<font color="rgb(0,255,0)">[-] Forcehit</font>
-
-
-
-
-⚠️ WARNING  
-IF THE SCRIPT IS NOT WORKING,  
-YOU ARE PROBABLY USING THE WRONG EXECUTOR.  
-USE THE CORRECT ONE FOR THE BEST EXPERIENCE.
-]]
+return { [[To load script please click load.]]
 }
